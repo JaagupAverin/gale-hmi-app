@@ -1,0 +1,27 @@
+# ninja log v6
+2268	2274	1750002811720692653	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-install	d58f3d0d3e0d5bc
+2268	2274	1750002811720692653	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-install	d58f3d0d3e0d5bc
+2274	2294	1750002811745692678	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-done	836fe2c829ae6f73
+3	2268	1750002809455690394	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-build	bb57c2e62c1d3695
+2274	2294	1750002811745692678	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-done	836fe2c829ae6f73
+2	15	1750002778791657598	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-mkdir	9fdeea0c06059779
+2	15	1750002778791657598	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-mkdir	9fdeea0c06059779
+50	61	1750002778838657651	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-configure	8b04f845d9139625
+27	38	1750002778814657624	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-update	9352514e6fdcecaa
+15	27	1750002778803657612	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-download	daaed8eefcd78e5d
+2274	2294	1750002811745692678	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/CMakeFiles/hmi_app-complete	836fe2c829ae6f73
+15	27	1750002778803657612	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-download	daaed8eefcd78e5d
+27	38	1750002778814657624	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-update	9352514e6fdcecaa
+2274	2294	1750002811745692678	_sysbuild/sysbuild/images/CMakeFiles/hmi_app-complete	836fe2c829ae6f73
+38	50	1750002778826657638	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-patch	3c23a877b608b234
+38	50	1750002778826657638	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-patch	3c23a877b608b234
+50	61	1750002778838657651	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-configure	8b04f845d9139625
+3	2268	1750002809455690394	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-build	bb57c2e62c1d3695
+3	1041	1750002834264713965	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-build	bb57c2e62c1d3695
+3	1041	1750002834264713965	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-build	bb57c2e62c1d3695
+1041	1048	1750002835302714896	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-install	d58f3d0d3e0d5bc
+1041	1048	1750002835302714896	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-install	d58f3d0d3e0d5bc
+1048	1066	1750002835326714917	_sysbuild/sysbuild/images/CMakeFiles/hmi_app-complete	836fe2c829ae6f73
+1048	1066	1750002835326714917	_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-done	836fe2c829ae6f73
+1048	1066	1750002835326714917	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/CMakeFiles/hmi_app-complete	836fe2c829ae6f73
+1048	1066	1750002835326714917	/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-done	836fe2c829ae6f73

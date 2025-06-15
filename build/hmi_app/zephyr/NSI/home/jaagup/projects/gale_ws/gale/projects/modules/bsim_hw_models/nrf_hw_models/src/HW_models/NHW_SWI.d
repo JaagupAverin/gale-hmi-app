@@ -1,0 +1,4 @@
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/NSI/home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models/src/HW_models/NHW_SWI.o: \
+ /home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models/src/HW_models/NHW_SWI.c \
+ /home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models/src/HW_models/NHW_config.h
+/home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models/src/HW_models/NHW_config.h:

@@ -1,0 +1,13 @@
+# Target labels
+ hmi_app
+# Source files and their labels
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/CMakeFiles/hmi_app
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/CMakeFiles/hmi_app.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/CMakeFiles/hmi_app-complete.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-build.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-configure.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-download.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-install.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-mkdir.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-patch.rule
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/_sysbuild/sysbuild/images/hmi_app-prefix/src/hmi_app-stamp/hmi_app-update.rule

@@ -1,0 +1,51 @@
+cmake:
+  application:
+    configuration-dir: '/home/jaagup/projects/gale_ws/gale/projects/hmi_app'
+    source-dir: '/home/jaagup/projects/gale_ws/gale/projects/hmi_app'
+  board:
+    name: 'nrf54l15bsim'
+    path:
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim'
+    qualifiers: 'nrf54l15/cpuapp'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/bindings'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/bindings'
+    extra-user-files:
+     - '/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay'
+    files:
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts'
+     - '/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay'
+    include-dirs:
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/include'
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/common'
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/riscv'
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/arm'
+     - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/include'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/x86'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/xtensa'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/sparc'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/riscv'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/posix'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/nios2'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm64'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arc'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts'
+  kconfig:
+    user-files:
+     - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  vendor-specific:
+    nordic:
+      svdfile: ''
+  zephyr:
+    version: '4.1.99'
+    zephyr-base: '/home/jaagup/projects/gale_ws/gale/projects/zephyr'
+version: '0.1.0'

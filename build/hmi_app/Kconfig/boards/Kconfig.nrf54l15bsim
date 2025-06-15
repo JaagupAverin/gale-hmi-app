@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/Kconfig.nrf54l15bsim"
