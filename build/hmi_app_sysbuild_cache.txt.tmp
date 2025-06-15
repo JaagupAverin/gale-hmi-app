@@ -7,7 +7,6 @@ BOARD_EXTENSIONS:BOOL=ON
 CACHED_BOARD:STRING=nrf54l15bsim/nrf54l15/cpuapp
 CACHED_SHIELD:STRING=
 CACHED_SNIPPET:STRING=
-EXTRA_DTC_OVERLAY_FILE:UNINITIALIZED=/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/jaagup/projects/gale_ws/gale/.venv/bin/python3][cfound components: Interpreter ][v3.13.3(3.10)]
 HWM:INTERNAL=v2
 HWMv2:INTERNAL=True

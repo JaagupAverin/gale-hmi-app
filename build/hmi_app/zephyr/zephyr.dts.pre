@@ -1275,7 +1275,7 @@ nvic: &cpuapp_nvic {};
  status = "okay";
 };
 # 0 "<command-line>" 2
-# 1 "/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay" 1
+# 1 "/home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.overlay" 1
 / {
     chosen {
         zephyr,shell-uart = &uart20;

@@ -13,10 +13,10 @@ cmake:
      - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/bindings'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/bindings'
     extra-user-files:
-     - '/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.overlay'
     files:
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts'
-     - '/home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.overlay'
     include-dirs:
      - '/home/jaagup/projects/gale_ws/gale/projects/nrf/include'
      - '/home/jaagup/projects/gale_ws/gale/projects/nrf/dts/common'
@@ -37,6 +37,10 @@ cmake:
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arc'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts'
   kconfig:
+    files:
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp_defconfig'
+     - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/prj.conf'
+     - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/.config.sysbuild'
     user-files:
      - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/prj.conf'
   toolchain:

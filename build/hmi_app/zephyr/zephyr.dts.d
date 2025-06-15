@@ -29,4 +29,4 @@ empty_file.o: \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr/dt-bindings/regulator/nrf5x.h \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm/nordic/nrf54l_05_10_15_cpuapp.dtsi \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/nordic/nrf54l15dk/nrf54l15dk_nrf54l_05_10_15-pinctrl.dtsi \
- /home/jaagup/projects/gale_ws/gale/projects/shared/boards/nrf54l15bsim/app.overlay
+ /home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.overlay
