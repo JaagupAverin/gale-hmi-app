@@ -18,3 +18,8 @@ set(SNIPPET_PATHS "/home/jaagup/projects/gale_ws/gale/projects/nrf/snippets/ci-s
 # Create variable scope for snippets build variables
 zephyr_create_scope(snippets)
 
+###############################################################################
+# Snippet 'serial-console'
+
+# Common variable appends.
+

@@ -54,7 +54,7 @@ CACHED_BOARD:STRING=nrf54l15bsim/nrf54l15/cpuapp
 CACHED_SHIELD:STRING=
 
 //Selected snippet
-CACHED_SNIPPET:STRING=
+CACHED_SNIPPET:STRING=serial-console
 
 //Path to a program.
 CCACHE_FOUND:FILEPATH=/usr/bin/ccache
@@ -374,6 +374,9 @@ PUNCOVER:FILEPATH=PUNCOVER-NOTFOUND
 
 //Path to a program.
 Python3_EXECUTABLE:FILEPATH=/home/jaagup/projects/gale_ws/gale/.venv/bin/python
+
+//Selected snippet
+SNIPPET:STRING=serial-console
 
 //Path to the SoC directory.
 SOC_FULL_DIR:PATH=/home/jaagup/projects/gale_ws/gale/projects/zephyr/soc/native/inf_clock

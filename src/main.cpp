@@ -47,6 +47,7 @@ int main() {
     flash_test();
 
     while (true) {
+        LOG_INF("TICK!");
         k_sleep(K_MSEC(1000));
     }
     return 0;

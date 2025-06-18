@@ -20,6 +20,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/jaagup/projects/gale_ws/gale/.venv/bin/west build -s /home/jaagup/projects/gale_ws/gale/projects/hmi_app -d /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build -t hmi_app -- -GNinja'
+  command: '/home/jaagup/projects/gale_ws/gale/.venv/bin/west build -s /home/jaagup/projects/gale_ws/gale/projects/hmi_app -d /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build -t hmi_app -S serial-console --pristine -- -GNinja'
   topdir: '/home/jaagup/projects/gale_ws'
   version: '1.4.0'
