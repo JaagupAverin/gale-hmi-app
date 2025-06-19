@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(gale_sensor_app)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # =============================================================================
 set(CMAKE_CXX_STANDARD 17)

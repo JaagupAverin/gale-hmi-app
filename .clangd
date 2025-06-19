@@ -1,4 +1,0 @@
-CompileFlags:
-  CompilationDatabase: ./build/hmi_app
-  Add: -Wno-unknown-warning-option
-  Remove: [-m*, -f*]
