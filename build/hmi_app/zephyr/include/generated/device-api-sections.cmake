@@ -160,5 +160,7 @@ list(APPEND sections "{NAME\;ivshmem_driver_api_area\;GROUP\;RODATA_REGION\;SUBA
 list(APPEND section_settings "{SECTION\;ivshmem_driver_api_area\;SORT\;NAME\;KEEP\;TRUE\;INPUT\;._ivshmem_driver_api.static.*\;SYMBOLS\;_ivshmem_driver_api_list_start\;_ivshmem_driver_api_list_end}")
 list(APPEND sections "{NAME\;ethphy_driver_api_area\;GROUP\;RODATA_REGION\;SUBALIGN\;4\;NOINPUT\;TRUE}")
 list(APPEND section_settings "{SECTION\;ethphy_driver_api_area\;SORT\;NAME\;KEEP\;TRUE\;INPUT\;._ethphy_driver_api.static.*\;SYMBOLS\;_ethphy_driver_api_list_start\;_ethphy_driver_api_list_end}")
+list(APPEND sections "{NAME\;virtio_driver_api_area\;GROUP\;RODATA_REGION\;SUBALIGN\;4\;NOINPUT\;TRUE}")
+list(APPEND section_settings "{SECTION\;virtio_driver_api_area\;SORT\;NAME\;KEEP\;TRUE\;INPUT\;._virtio_driver_api.static.*\;SYMBOLS\;_virtio_driver_api_list_start\;_virtio_driver_api_list_end}")
 set(DEVICE_API_SECTIONS         "${sections}" CACHE INTERNAL "")
 set(DEVICE_API_SECTION_SETTINGS "${section_settings}" CACHE INTERNAL "")

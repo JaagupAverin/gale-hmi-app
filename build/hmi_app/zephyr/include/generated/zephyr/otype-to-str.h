@@ -121,3 +121,4 @@ case K_OBJ_DRIVER_TCPC: ret = "tcpc driver"; break;
 case K_OBJ_DRIVER_USBC_VBUS: ret = "usbc_vbus driver"; break;
 case K_OBJ_DRIVER_IVSHMEM: ret = "ivshmem driver"; break;
 case K_OBJ_DRIVER_ETHPHY: ret = "ethphy driver"; break;
+case K_OBJ_DRIVER_VIRTIO: ret = "virtio driver"; break;

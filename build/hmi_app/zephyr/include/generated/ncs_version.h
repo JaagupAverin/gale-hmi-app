@@ -1,7 +1,7 @@
 #ifndef _NCS_VERSION_H_
 #define _NCS_VERSION_H_
 
-/* The template values come from cmake/version.cmake
+/* The template values come from cmake/modules/version.cmake
  * BUILD_VERSION related template values will be 'git describe',
  * alternatively user defined BUILD_VERSION.
  */
@@ -19,7 +19,7 @@
 #define NCS_VERSION_EXTENDED_STRING  ""
 #define NCS_VERSION_TWEAK_STRING     ""
 
-#define NCS_BUILD_VERSION v2.9.0-rc1-3266-g8854d47ddf22
+#define NCS_BUILD_VERSION v2.9.0-rc1-3504-g14584830c976
 
 
 #endif /* _NCS_VERSION_H_ */

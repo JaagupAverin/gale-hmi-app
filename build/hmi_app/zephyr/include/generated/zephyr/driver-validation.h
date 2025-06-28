@@ -165,4 +165,6 @@
 #define K_SYSCALL_DRIVER_IVSHMEM(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, ivshmem, IVSHMEM)
 
 #define K_SYSCALL_DRIVER_ETHPHY(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, ethphy, ETHPHY)
+
+#define K_SYSCALL_DRIVER_VIRTIO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, virtio, VIRTIO)
 #endif /* DRIVER_VALIDATION_GEN_H */

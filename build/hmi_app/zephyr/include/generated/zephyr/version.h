@@ -1,7 +1,7 @@
 #ifndef _KERNEL_VERSION_H_
 #define _KERNEL_VERSION_H_
 
-/* The template values come from cmake/version.cmake
+/* The template values come from cmake/modules/version.cmake
  * BUILD_VERSION related template values will be 'git describe',
  * alternatively user defined BUILD_VERSION.
  */
@@ -19,7 +19,7 @@
 #define KERNEL_VERSION_EXTENDED_STRING  "4.1.99+0"
 #define KERNEL_VERSION_TWEAK_STRING     "4.1.99+0"
 
-#define BUILD_VERSION 68ab1cf88c63
+#define BUILD_VERSION 93aefcfdbf61
 
 
 #endif /* _KERNEL_VERSION_H_ */

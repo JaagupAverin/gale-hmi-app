@@ -89,6 +89,7 @@
         "tcpc_driver_api",
         "usbc_vbus_driver_api",
         "ivshmem_driver_api",
-        "ethphy_driver_api"
+        "ethphy_driver_api",
+        "virtio_driver_api"
     ]
 }

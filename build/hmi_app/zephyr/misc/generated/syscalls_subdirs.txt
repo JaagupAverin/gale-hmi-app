@@ -56,6 +56,7 @@
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_tracing
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_usb
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_usb_c
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_virtio
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_xen
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_zbus
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_zvfs
@@ -64,9 +65,9 @@
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_arm64
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_common
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_mips
-/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_nios2
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_posix
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_riscv
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_rx
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_sparc
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_x86
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_arch_xtensa
@@ -151,9 +152,11 @@
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_mic_privacy_intel
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_coresight
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_devmux
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_flexram
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_ft8xx
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_grove_lcd
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_nxp_flexio
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_nxp_rtxxx_dsp_ctrl
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_pio_rpi_pico
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_renesas_ra_external_interrupt
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_drivers_misc_stm32_wkup_pins
@@ -228,6 +231,7 @@
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_mgmt_mcumgr_grp_stat_mgmt
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_mgmt_mcumgr_grp_zephyr
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_modem_backend
+/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_modem_ubx
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_net_conn_mgr
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_net_hdlc_rcp_if
 /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/misc/generated/syscalls_links/include_zephyr_net_http

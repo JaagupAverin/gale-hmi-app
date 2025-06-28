@@ -3,9 +3,9 @@ empty_file.o: \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common/mem.h \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm/nordic/nrf54l15_cpuapp.dtsi \
- /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common/nordic/nrf54l15.dtsi \
- /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common/nordic/nrf54l_05_10_15.dtsi \
- /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common/nordic/nrf_common.dtsi \
+ /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/vendor/nordic/nrf54l15.dtsi \
+ /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi \
+ /home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/vendor/nordic/nrf_common.dtsi \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr/dt-bindings/adc/adc.h \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr/dt-bindings/dt-util.h \
  /home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr/sys/util_macro.h \

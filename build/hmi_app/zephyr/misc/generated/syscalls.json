@@ -4433,6 +4433,14 @@
     ],
     [
         [
+            "void rtio_sqe_signal",
+            "struct rtio_sqe *sqe"
+        ],
+        "rtio.h",
+        false
+    ],
+    [
+        [
             "int rtio_sqe_copy_in_get_handles",
             "struct rtio *r, const struct rtio_sqe *sqes,\n\t\t\t\t\t   struct rtio_sqe **handle, size_t sqe_count"
         ],

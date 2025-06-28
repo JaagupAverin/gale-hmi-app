@@ -1,7 +1,7 @@
 #ifndef _APP_VERSION_H_
 #define _APP_VERSION_H_
 
-/* The template values come from cmake/version.cmake
+/* The template values come from cmake/modules/version.cmake
  * BUILD_VERSION related template values will be 'git describe',
  * alternatively user defined BUILD_VERSION.
  */
@@ -19,7 +19,7 @@
 #define APP_VERSION_EXTENDED_STRING  "0.1.0-alpha+1"
 #define APP_VERSION_TWEAK_STRING     "0.1.0+1"
 
-#define APP_BUILD_VERSION 0ba6ad6e42d0
+#define APP_BUILD_VERSION cc11abccdd55
 
 
 #endif /* _APP_VERSION_H_ */

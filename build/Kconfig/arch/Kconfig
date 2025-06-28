@@ -1,10 +1,10 @@
 # Load Zephyr Arch Kconfig descriptions.
+osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/rx/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/x86/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/xtensa/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/sparc/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/riscv/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/posix/Kconfig"
-osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/nios2/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/mips/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/arm64/Kconfig"
 osource "/home/jaagup/projects/gale_ws/gale/projects/zephyr/arch/arm/Kconfig"

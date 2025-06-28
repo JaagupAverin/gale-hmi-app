@@ -26,23 +26,24 @@ cmake:
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/include'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/include/zephyr'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/common'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/vendor'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/rx'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/x86'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/xtensa'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/sparc'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/riscv'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/posix'
-     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/nios2'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm64'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arm'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts/arc'
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/dts'
   kconfig:
     extra-user-files:
-     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/snippets/serial-console/serial-console.conf'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.conf'
     files:
      - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp_defconfig'
      - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/prj.conf'
-     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/snippets/serial-console/serial-console.conf'
+     - '/home/jaagup/projects/gale_ws/gale/projects/zephyr/../shared/boards/nrf54l15bsim/app.conf'
      - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/.config.sysbuild'
     user-files:
      - '/home/jaagup/projects/gale_ws/gale/projects/hmi_app/prj.conf'

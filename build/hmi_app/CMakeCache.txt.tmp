@@ -54,7 +54,7 @@ CACHED_BOARD:STRING=nrf54l15bsim/nrf54l15/cpuapp
 CACHED_SHIELD:STRING=
 
 //Selected snippet
-CACHED_SNIPPET:STRING=serial-console
+CACHED_SNIPPET:STRING=
 
 //Path to a program.
 CCACHE_FOUND:FILEPATH=/usr/bin/ccache
@@ -327,6 +327,9 @@ EXTRA_KCONFIG_TARGETS:UNINITIALIZED=
 //No help, variable specified on the command line.
 FORCED_CONF_FILE:FILEPATH=/home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app/zephyr/.config.sysbuild
 
+//Path to a program.
+GEN_KOBJECT_LIST:FILEPATH=/home/jaagup/projects/gale_ws/gale/projects/zephyr/scripts/build/gen_kobject_list.py
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
@@ -374,9 +377,6 @@ PUNCOVER:FILEPATH=PUNCOVER-NOTFOUND
 
 //Path to a program.
 Python3_EXECUTABLE:FILEPATH=/home/jaagup/projects/gale_ws/gale/.venv/bin/python
-
-//Selected snippet
-SNIPPET:STRING=serial-console
 
 //Path to the SoC directory.
 SOC_FULL_DIR:PATH=/home/jaagup/projects/gale_ws/gale/projects/zephyr/soc/native/inf_clock
