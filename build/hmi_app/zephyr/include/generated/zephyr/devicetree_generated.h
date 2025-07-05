@@ -85,10 +85,10 @@
  *   74  /soc/peripheral@50000000/radio@8a000/ieee802154
  *   75  /soc/peripheral@50000000/regulator@120000
  *   76  /soc/peripheral@50000000/regulator@120000/regulator@120600
- *   77  /soc/rram-controller@5004b000
- *   78  /soc/rram-controller@5004b000/rram@0
- *   79  /soc/rram-controller@5004b000/rram@0/partitions
- *   80  /soc/rram-controller@5004b000/rram@0/partitions/partition@0
+ *   77  /soc/sim_flash_controller
+ *   78  /soc/sim_flash_controller/flash@0
+ *   79  /soc/sim_flash_controller/flash@0/partitions
+ *   80  /soc/sim_flash_controller/flash@0/partitions/partition@0
  *
  * Definitions derived from these nodes in dependency order are next,
  * followed by /chosen nodes.
@@ -1783,14 +1783,14 @@
 /* Helper macros for child nodes of this node. */
 #define DT_N_S_soc_CHILD_NUM 6
 #define DT_N_S_soc_CHILD_NUM_STATUS_OKAY 6
-#define DT_N_S_soc_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus)
-#define DT_N_S_soc_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_uicr_ffd000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_rram_controller_5004b000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus)
-#define DT_N_S_soc_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__)
-#define DT_N_S_soc_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__)
-#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus)
-#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_uicr_ffd000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_rram_controller_5004b000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus)
-#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__)
-#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__)
+#define DT_N_S_soc_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_sim_flash_controller)
+#define DT_N_S_soc_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_uicr_ffd000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_sim_flash_controller)
+#define DT_N_S_soc_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__)
+#define DT_N_S_soc_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__)
+#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_sim_flash_controller)
+#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_uicr_ffd000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_sim_flash_controller)
+#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__)
+#define DT_N_S_soc_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__)
 
 /* Node's hash: */
 #define DT_N_S_soc_HASH DcVqqq9YzG86l3_Hk7pNncUh2rnHG8USjbVY6wBdFts
@@ -1810,7 +1810,7 @@
 	20, /* /soc/uicr@ffd000 */ \
 	21, /* /soc/cpuapp-ppb-bus */ \
 	23, /* /soc/peripheral@50000000 */ \
-	77, /* /soc/rram-controller@5004b000 */
+	77, /* /soc/sim_flash_controller */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_EXISTS 1
@@ -1977,7 +1977,7 @@
 #define DT_N_S_soc_S_memory_50041000_PARENT DT_N_S_soc
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_memory_50041000_CHILD_IDX 4
+#define DT_N_S_soc_S_memory_50041000_CHILD_IDX 3
 
 /* Helpers for dealing with node labels: */
 #define DT_N_S_soc_S_memory_50041000_NODELABEL_NUM 1
@@ -2197,7 +2197,7 @@
 #define DT_N_S_soc_S_cpuapp_ppb_bus_PARENT DT_N_S_soc
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_cpuapp_ppb_bus_CHILD_IDX 5
+#define DT_N_S_soc_S_cpuapp_ppb_bus_CHILD_IDX 4
 
 /* Helpers for dealing with node labels: */
 #define DT_N_S_soc_S_cpuapp_ppb_bus_NODELABEL_NUM 1
@@ -2587,8 +2587,7 @@
 	66, /* /soc/peripheral@50000000/uart@c8000 */ \
 	67, /* /soc/peripheral@50000000/uart@104000 */ \
 	68, /* /soc/peripheral@50000000/power@10e000 */ \
-	71, /* /soc/peripheral@50000000/radio@8a000 */ \
-	77, /* /soc/rram-controller@5004b000 */
+	71, /* /soc/peripheral@50000000/radio@8a000 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100_EXISTS 1
@@ -9920,133 +9919,115 @@
 #define DT_N_S_soc_S_peripheral_50000000_S_regulator_120000_S_regulator_120600_P_zephyr_pm_device_runtime_auto_EXISTS 1
 
 /*
- * Devicetree node: /soc/rram-controller@5004b000
+ * Devicetree node: /soc/sim_flash_controller
  *
- * Node identifier: DT_N_S_soc_S_rram_controller_5004b000
+ * Node identifier: DT_N_S_soc_S_sim_flash_controller
  *
- * Binding (compatible = nordic,rram-controller):
- *   $ZEPHYR_BASE/dts/bindings/flash_controller/nordic,rram-controller.yaml
+ * Binding (compatible = zephyr,sim-flash):
+ *   $ZEPHYR_BASE/dts/bindings/flash_controller/zephyr,sim-flash.yaml
  *
  * (Descriptions have moved to the Devicetree Bindings Index
  * in the documentation.)
  */
 
 /* Node's full path: */
-#define DT_N_S_soc_S_rram_controller_5004b000_PATH "/soc/rram-controller@5004b000"
+#define DT_N_S_soc_S_sim_flash_controller_PATH "/soc/sim_flash_controller"
 
 /* Node's name with unit-address: */
-#define DT_N_S_soc_S_rram_controller_5004b000_FULL_NAME "rram-controller@5004b000"
-#define DT_N_S_soc_S_rram_controller_5004b000_FULL_NAME_UNQUOTED rram-controller@5004b000
-#define DT_N_S_soc_S_rram_controller_5004b000_FULL_NAME_TOKEN rram_controller_5004b000
-#define DT_N_S_soc_S_rram_controller_5004b000_FULL_NAME_UPPER_TOKEN RRAM_CONTROLLER_5004B000
+#define DT_N_S_soc_S_sim_flash_controller_FULL_NAME "sim_flash_controller"
+#define DT_N_S_soc_S_sim_flash_controller_FULL_NAME_UNQUOTED sim_flash_controller
+#define DT_N_S_soc_S_sim_flash_controller_FULL_NAME_TOKEN sim_flash_controller
+#define DT_N_S_soc_S_sim_flash_controller_FULL_NAME_UPPER_TOKEN SIM_FLASH_CONTROLLER
 
 /* Node parent (/soc) identifier: */
-#define DT_N_S_soc_S_rram_controller_5004b000_PARENT DT_N_S_soc
+#define DT_N_S_soc_S_sim_flash_controller_PARENT DT_N_S_soc
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_rram_controller_5004b000_CHILD_IDX 3
+#define DT_N_S_soc_S_sim_flash_controller_CHILD_IDX 5
 
 /* Helpers for dealing with node labels: */
-#define DT_N_S_soc_S_rram_controller_5004b000_NODELABEL_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_NODELABEL(fn) fn(rram_controller)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_NODELABEL_VARGS(fn, ...) fn(rram_controller, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc) fn(DT_N)
+#define DT_N_S_soc_S_sim_flash_controller_NODELABEL_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_NODELABEL(fn) fn(rram_controller)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_NODELABEL_VARGS(fn, ...) fn(rram_controller, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc) fn(DT_N)
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_S_soc_S_rram_controller_5004b000_CHILD_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_CHILD_NUM_STATUS_OKAY 1
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_CHILD_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_CHILD_NUM_STATUS_OKAY 1
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__)
 
 /* Node's hash: */
-#define DT_N_S_soc_S_rram_controller_5004b000_HASH mQQstuFXfXAcGqZ9Ya3XVRlcNKoCtY6O_VNObV3IU4s
+#define DT_N_S_soc_S_sim_flash_controller_HASH XKMoaLu_axxpK5ttboXw8T_hXYt0UK9Sveh20Vaz8lY
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rram_controller_5004b000_ORD 77
-#define DT_N_S_soc_S_rram_controller_5004b000_ORD_STR_SORTABLE 00077
+#define DT_N_S_soc_S_sim_flash_controller_ORD 77
+#define DT_N_S_soc_S_sim_flash_controller_ORD_STR_SORTABLE 00077
 
 /* Ordinals for what this node depends on directly: */
-#define DT_N_S_soc_S_rram_controller_5004b000_REQUIRES_ORDS \
-	17, /* /soc */ \
-	24, /* /soc/cpuapp-ppb-bus/interrupt-controller@e000e100 */
+#define DT_N_S_soc_S_sim_flash_controller_REQUIRES_ORDS \
+	17, /* /soc */
 
 /* Ordinals for what depends directly on this node: */
-#define DT_N_S_soc_S_rram_controller_5004b000_SUPPORTS_ORDS \
-	78, /* /soc/rram-controller@5004b000/rram@0 */
+#define DT_N_S_soc_S_sim_flash_controller_SUPPORTS_ORDS \
+	78, /* /soc/sim_flash_controller/flash@0 */
 
 /* Existence and alternate IDs: */
-#define DT_N_S_soc_S_rram_controller_5004b000_EXISTS 1
-#define DT_N_INST_0_nordic_rram_controller DT_N_S_soc_S_rram_controller_5004b000
-#define DT_N_NODELABEL_rram_controller     DT_N_S_soc_S_rram_controller_5004b000
+#define DT_N_S_soc_S_sim_flash_controller_EXISTS 1
+#define DT_N_INST_0_zephyr_sim_flash   DT_N_S_soc_S_sim_flash_controller
+#define DT_N_NODELABEL_rram_controller DT_N_S_soc_S_sim_flash_controller
 
 /* Macros for properties that are special in the specification: */
-#define DT_N_S_soc_S_rram_controller_5004b000_REG_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_REG_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_REG_IDX_0_VAL_ADDRESS 1342484480 /* 0x5004b000 */
-#define DT_N_S_soc_S_rram_controller_5004b000_REG_IDX_0_VAL_SIZE 4096 /* 0x1000 */
-#define DT_N_S_soc_S_rram_controller_5004b000_RANGES_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_FOREACH_RANGE(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_VAL_irq 75
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_VAL_irq_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_VAL_priority 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_VAL_priority_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_IDX_0_CONTROLLER DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100
-#define DT_N_S_soc_S_rram_controller_5004b000_IRQ_LEVEL 1
-#define DT_N_S_soc_S_rram_controller_5004b000_COMPAT_MATCHES_nordic_rram_controller 1
-#define DT_N_S_soc_S_rram_controller_5004b000_COMPAT_VENDOR_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_COMPAT_VENDOR_IDX_0 "Nordic Semiconductor"
-#define DT_N_S_soc_S_rram_controller_5004b000_COMPAT_MODEL_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_COMPAT_MODEL_IDX_0 "rram-controller"
-#define DT_N_S_soc_S_rram_controller_5004b000_STATUS_okay 1
+#define DT_N_S_soc_S_sim_flash_controller_REG_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_RANGES_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_IRQ_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_IRQ_LEVEL 0
+#define DT_N_S_soc_S_sim_flash_controller_COMPAT_MATCHES_zephyr_sim_flash 1
+#define DT_N_S_soc_S_sim_flash_controller_COMPAT_VENDOR_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_COMPAT_VENDOR_IDX_0 "The Zephyr Project"
+#define DT_N_S_soc_S_sim_flash_controller_COMPAT_MODEL_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_COMPAT_MODEL_IDX_0 "sim-flash"
+#define DT_N_S_soc_S_sim_flash_controller_STATUS_okay 1
 
 /* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_soc_S_rram_controller_5004b000_PINCTRL_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible {"nordic,rram-controller"}
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_IDX_0 "nordic,rram-controller"
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_IDX_0_STRING_UNQUOTED nordic,rram-controller
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_IDX_0_STRING_TOKEN nordic_rram_controller
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_IDX_0_STRING_UPPER_TOKEN NORDIC_RRAM_CONTROLLER
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_rram_controller_5004b000, compatible, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000, compatible, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_LEN 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_compatible_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg {1342484480 /* 0x5004b000 */, 4096 /* 0x1000 */}
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg_IDX_0 1342484480
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg_IDX_1 4096
-#define DT_N_S_soc_S_rram_controller_5004b000_P_reg_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts {75 /* 0x4b */, 1 /* 0x1 */}
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts_IDX_0 75
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts_IDX_1 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_interrupts_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_zephyr_deferred_init 0
-#define DT_N_S_soc_S_rram_controller_5004b000_P_zephyr_deferred_init_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_wakeup_source 0
-#define DT_N_S_soc_S_rram_controller_5004b000_P_wakeup_source_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_P_zephyr_pm_device_runtime_auto 0
-#define DT_N_S_soc_S_rram_controller_5004b000_P_zephyr_pm_device_runtime_auto_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_erase_value 255
+#define DT_N_S_soc_S_sim_flash_controller_P_erase_value_IDX_0_ENUM_IDX 0
+#define DT_N_S_soc_S_sim_flash_controller_P_erase_value_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_erase_value_IDX_0_ENUM_VAL_255_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_erase_value_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible {"zephyr,sim-flash"}
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_IDX_0 "zephyr,sim-flash"
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_IDX_0_STRING_UNQUOTED zephyr,sim-flash
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_IDX_0_STRING_TOKEN zephyr_sim_flash
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_IDX_0_STRING_UPPER_TOKEN ZEPHYR_SIM_FLASH
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_sim_flash_controller, compatible, 0)
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller, compatible, 0)
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_LEN 1
+#define DT_N_S_soc_S_sim_flash_controller_P_compatible_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_zephyr_deferred_init 0
+#define DT_N_S_soc_S_sim_flash_controller_P_zephyr_deferred_init_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_wakeup_source 0
+#define DT_N_S_soc_S_sim_flash_controller_P_wakeup_source_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_P_zephyr_pm_device_runtime_auto 0
+#define DT_N_S_soc_S_sim_flash_controller_P_zephyr_pm_device_runtime_auto_EXISTS 1
 
 /*
- * Devicetree node: /soc/rram-controller@5004b000/rram@0
+ * Devicetree node: /soc/sim_flash_controller/flash@0
  *
- * Node identifier: DT_N_S_soc_S_rram_controller_5004b000_S_rram_0
+ * Node identifier: DT_N_S_soc_S_sim_flash_controller_S_flash_0
  *
  * Binding (compatible = soc-nv-flash):
  *   $ZEPHYR_BASE/dts/bindings/mtd/soc-nv-flash.yaml
@@ -10056,107 +10037,107 @@
  */
 
 /* Node's full path: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_PATH "/soc/rram-controller@5004b000/rram@0"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_PATH "/soc/sim_flash_controller/flash@0"
 
 /* Node's name with unit-address: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FULL_NAME "rram@0"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FULL_NAME_UNQUOTED rram@0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FULL_NAME_TOKEN rram_0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FULL_NAME_UPPER_TOKEN RRAM_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FULL_NAME "flash@0"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FULL_NAME_UNQUOTED flash@0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FULL_NAME_TOKEN flash_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FULL_NAME_UPPER_TOKEN FLASH_0
 
-/* Node parent (/soc/rram-controller@5004b000) identifier: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_PARENT DT_N_S_soc_S_rram_controller_5004b000
+/* Node parent (/soc/sim_flash_controller) identifier: */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_PARENT DT_N_S_soc_S_sim_flash_controller
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_CHILD_IDX 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_CHILD_IDX 0
 
 /* Helpers for dealing with node labels: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_NODELABEL_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_NODELABEL(fn) fn(cpuapp_rram)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_NODELABEL_VARGS(fn, ...) fn(cpuapp_rram, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc) fn(DT_N)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_NODELABEL_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_NODELABEL(fn) fn(cpuapp_rram)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_NODELABEL_VARGS(fn, ...) fn(cpuapp_rram, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_sim_flash_controller) fn(DT_N_S_soc) fn(DT_N)
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_CHILD_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_CHILD_NUM_STATUS_OKAY 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_CHILD_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_CHILD_NUM_STATUS_OKAY 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__)
 
 /* Node's hash: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_HASH x0chhiDu65j4B89yToTrBMJ8jf3DyyCVFcM_imhn2s4
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_HASH 8ze0oIegVVRyIK_f8ykOgyizEGaXssf83SyOJZ_1n_A
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_ORD 78
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_ORD_STR_SORTABLE 00078
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_ORD 78
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_ORD_STR_SORTABLE 00078
 
 /* Ordinals for what this node depends on directly: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_REQUIRES_ORDS \
-	77, /* /soc/rram-controller@5004b000 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_REQUIRES_ORDS \
+	77, /* /soc/sim_flash_controller */
 
 /* Ordinals for what depends directly on this node: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_SUPPORTS_ORDS \
-	79, /* /soc/rram-controller@5004b000/rram@0/partitions */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_SUPPORTS_ORDS \
+	79, /* /soc/sim_flash_controller/flash@0/partitions */
 
 /* Existence and alternate IDs: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_EXISTS 1
-#define DT_N_INST_0_soc_nv_flash   DT_N_S_soc_S_rram_controller_5004b000_S_rram_0
-#define DT_N_NODELABEL_cpuapp_rram DT_N_S_soc_S_rram_controller_5004b000_S_rram_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_EXISTS 1
+#define DT_N_INST_0_soc_nv_flash   DT_N_S_soc_S_sim_flash_controller_S_flash_0
+#define DT_N_NODELABEL_cpuapp_rram DT_N_S_soc_S_sim_flash_controller_S_flash_0
 
 /* Macros for properties that are special in the specification: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_REG_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_REG_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_REG_IDX_0_VAL_ADDRESS 0 /* 0x0 */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_REG_IDX_0_VAL_SIZE 1462272 /* 0x165000 */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_RANGES_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_FOREACH_RANGE(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_IRQ_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_IRQ_LEVEL 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_COMPAT_MATCHES_soc_nv_flash 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_STATUS_okay 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_REG_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_REG_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_REG_IDX_0_VAL_ADDRESS 0 /* 0x0 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_REG_IDX_0_VAL_SIZE 1462272 /* 0x165000 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_RANGES_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_IRQ_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_IRQ_LEVEL 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_COMPAT_MATCHES_soc_nv_flash 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_STATUS_okay 1
 
 /* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_PINCTRL_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_erase_block_size 4096
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_erase_block_size_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_write_block_size 16
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_write_block_size_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible {"soc-nv-flash"}
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_IDX_0 "soc-nv-flash"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_IDX_0_STRING_UNQUOTED soc-nv-flash
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_IDX_0_STRING_TOKEN soc_nv_flash
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_IDX_0_STRING_UPPER_TOKEN SOC_NV_FLASH
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, compatible, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, compatible, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, compatible, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_LEN 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_compatible_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg {0 /* 0x0 */, 1462272 /* 0x165000 */}
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg_IDX_0 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg_IDX_1 1462272
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_reg_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_zephyr_deferred_init 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_zephyr_deferred_init_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_wakeup_source 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_wakeup_source_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_zephyr_pm_device_runtime_auto 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_P_zephyr_pm_device_runtime_auto_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_erase_block_size 4096
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_erase_block_size_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_write_block_size 16
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_write_block_size_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible {"soc-nv-flash"}
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_IDX_0 "soc-nv-flash"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_IDX_0_STRING_UNQUOTED soc-nv-flash
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_IDX_0_STRING_TOKEN soc_nv_flash
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_IDX_0_STRING_UPPER_TOKEN SOC_NV_FLASH
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, compatible, 0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, compatible, 0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, compatible, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_LEN 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_compatible_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg {0 /* 0x0 */, 1462272 /* 0x165000 */}
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg_IDX_0 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg_IDX_1 1462272
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_reg_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_zephyr_deferred_init 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_zephyr_deferred_init_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_wakeup_source 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_wakeup_source_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_zephyr_pm_device_runtime_auto 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_P_zephyr_pm_device_runtime_auto_EXISTS 1
 
 /*
- * Devicetree node: /soc/rram-controller@5004b000/rram@0/partitions
+ * Devicetree node: /soc/sim_flash_controller/flash@0/partitions
  *
- * Node identifier: DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions
+ * Node identifier: DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions
  *
  * Binding (compatible = fixed-partitions):
  *   $ZEPHYR_BASE/dts/bindings/mtd/fixed-partitions.yaml
@@ -10166,169 +10147,169 @@
  */
 
 /* Node's full path: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_PATH "/soc/rram-controller@5004b000/rram@0/partitions"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_PATH "/soc/sim_flash_controller/flash@0/partitions"
 
 /* Node's name with unit-address: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FULL_NAME "partitions"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FULL_NAME_UNQUOTED partitions
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FULL_NAME_TOKEN partitions
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FULL_NAME_UPPER_TOKEN PARTITIONS
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FULL_NAME "partitions"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FULL_NAME_UNQUOTED partitions
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FULL_NAME_TOKEN partitions
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FULL_NAME_UPPER_TOKEN PARTITIONS
 
-/* Node parent (/soc/rram-controller@5004b000/rram@0) identifier: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_PARENT DT_N_S_soc_S_rram_controller_5004b000_S_rram_0
+/* Node parent (/soc/sim_flash_controller/flash@0) identifier: */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_PARENT DT_N_S_soc_S_sim_flash_controller_S_flash_0
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_CHILD_IDX 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_CHILD_IDX 0
 
 /* Helpers for dealing with node labels: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_NODELABEL_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_NODELABEL(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_NODELABEL_VARGS(fn, ...) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc) fn(DT_N)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_NODELABEL_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_NODELABEL(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_NODELABEL_VARGS(fn, ...) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0) fn(DT_N_S_soc_S_sim_flash_controller) fn(DT_N_S_soc) fn(DT_N)
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_CHILD_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_CHILD_NUM_STATUS_OKAY 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_CHILD_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_CHILD_NUM_STATUS_OKAY 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__)
 
 /* Node's hash: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_HASH UBJUrNTlEHrhP9W3GAXZ6sFPYOgKzxRawmsN0IY0_v4
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_HASH jhmkAzV9NX33PgH4HvUfdI8zgpAYdBsBJpaRNDfeBig
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_ORD 79
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_ORD_STR_SORTABLE 00079
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_ORD 79
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_ORD_STR_SORTABLE 00079
 
 /* Ordinals for what this node depends on directly: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_REQUIRES_ORDS \
-	78, /* /soc/rram-controller@5004b000/rram@0 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_REQUIRES_ORDS \
+	78, /* /soc/sim_flash_controller/flash@0 */
 
 /* Ordinals for what depends directly on this node: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_SUPPORTS_ORDS \
-	80, /* /soc/rram-controller@5004b000/rram@0/partitions/partition@0 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_SUPPORTS_ORDS \
+	80, /* /soc/sim_flash_controller/flash@0/partitions/partition@0 */
 
 /* Existence and alternate IDs: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_EXISTS 1
-#define DT_N_INST_0_fixed_partitions DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_EXISTS 1
+#define DT_N_INST_0_fixed_partitions DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions
 
 /* Macros for properties that are special in the specification: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_REG_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_RANGES_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_FOREACH_RANGE(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_IRQ_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_IRQ_LEVEL 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_COMPAT_MATCHES_fixed_partitions 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_STATUS_okay 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_REG_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_RANGES_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_IRQ_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_IRQ_LEVEL 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_COMPAT_MATCHES_fixed_partitions 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_STATUS_okay 1
 
 /* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_PINCTRL_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_PINCTRL_NUM 0
 
 /* (No generic property macros) */
 
 /*
- * Devicetree node: /soc/rram-controller@5004b000/rram@0/partitions/partition@0
+ * Devicetree node: /soc/sim_flash_controller/flash@0/partitions/partition@0
  *
- * Node identifier: DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0
+ * Node identifier: DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0
  *
  * (Descriptions have moved to the Devicetree Bindings Index
  * in the documentation.)
  */
 
 /* Node's full path: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_PATH "/soc/rram-controller@5004b000/rram@0/partitions/partition@0"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_PATH "/soc/sim_flash_controller/flash@0/partitions/partition@0"
 
 /* Node's name with unit-address: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FULL_NAME "partition@0"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FULL_NAME_UNQUOTED partition@0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FULL_NAME_TOKEN partition_0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FULL_NAME_UPPER_TOKEN PARTITION_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FULL_NAME "partition@0"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FULL_NAME_UNQUOTED partition@0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FULL_NAME_TOKEN partition_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FULL_NAME_UPPER_TOKEN PARTITION_0
 
-/* Node parent (/soc/rram-controller@5004b000/rram@0/partitions) identifier: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_PARENT DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions
+/* Node parent (/soc/sim_flash_controller/flash@0/partitions) identifier: */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_PARENT DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions
 
 /* Node's index in its parent's list of children: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_CHILD_IDX 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_CHILD_IDX 0
 
 /* Helpers for dealing with node labels: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_NODELABEL_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_NODELABEL(fn) fn(storage_partition)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_NODELABEL_VARGS(fn, ...) fn(storage_partition, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc) fn(DT_N)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_NODELABEL_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_NODELABEL(fn) fn(storage_partition)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_NODELABEL_VARGS(fn, ...) fn(storage_partition, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_ANCESTOR(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0) fn(DT_N_S_soc_S_sim_flash_controller) fn(DT_N_S_soc) fn(DT_N)
 
 /* Helper macros for child nodes of this node. */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_CHILD_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_CHILD_NUM_STATUS_OKAY 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_SEP(fn, sep) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_VARGS(fn, ...) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_CHILD_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_CHILD_NUM_STATUS_OKAY 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_SEP(fn, sep) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_VARGS(fn, ...) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
 
 /* Node's hash: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_HASH eM7QU3TaGeqoenqOQWQ1FTSi4Zz_IyqPwrFc4tg4rDE
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_HASH 19_tQ67m8o_ASl5xkuWeKFYwGt2fQP6o8bztlZv_Apw
 
 /* Node's dependency ordinal: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_ORD 80
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_ORD_STR_SORTABLE 00080
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_ORD 80
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_ORD_STR_SORTABLE 00080
 
 /* Ordinals for what this node depends on directly: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_REQUIRES_ORDS \
-	79, /* /soc/rram-controller@5004b000/rram@0/partitions */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_REQUIRES_ORDS \
+	79, /* /soc/sim_flash_controller/flash@0/partitions */
 
 /* Ordinals for what depends directly on this node: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_SUPPORTS_ORDS /* nothing */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_SUPPORTS_ORDS /* nothing */
 
 /* Existence and alternate IDs: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_EXISTS 1
-#define DT_N_NODELABEL_storage_partition DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_EXISTS 1
+#define DT_N_NODELABEL_storage_partition DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0
 
 /* Macros for properties that are special in the specification: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_REG_NUM 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_REG_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_REG_IDX_0_VAL_ADDRESS 0 /* 0x0 */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_REG_IDX_0_VAL_SIZE 512000 /* 0x7d000 */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_RANGES_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_FOREACH_RANGE(fn) 
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_IRQ_NUM 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_IRQ_LEVEL 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_STATUS_okay 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_REG_NUM 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_REG_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_REG_IDX_0_VAL_ADDRESS 0 /* 0x0 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_REG_IDX_0_VAL_SIZE 512000 /* 0x7d000 */
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_RANGES_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_FOREACH_RANGE(fn) 
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_IRQ_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_IRQ_LEVEL 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_STATUS_okay 1
 
 /* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_PINCTRL_NUM 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_PINCTRL_NUM 0
 
 /* fixed-partitions identifier: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_PARTITION_ID 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_PARTITION_ID 0
 
 /* Generic property macros: */
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label "storage"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_STRING_UNQUOTED storage
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_STRING_TOKEN storage
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_STRING_UPPER_TOKEN STORAGE
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_IDX_0 "storage"
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, label, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, label, 0)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, label, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, label, 0, __VA_ARGS__)
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_LEN 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_label_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_read_only 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_read_only_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg {0 /* 0x0 */, 512000 /* 0x7d000 */}
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg_IDX_0_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg_IDX_0 0
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg_IDX_1_EXISTS 1
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg_IDX_1 512000
-#define DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0_P_reg_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label "storage"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_STRING_UNQUOTED storage
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_STRING_TOKEN storage
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_STRING_UPPER_TOKEN STORAGE
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_IDX_0 "storage"
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, label, 0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, label, 0)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, label, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, label, 0, __VA_ARGS__)
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_LEN 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_label_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_read_only 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_read_only_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg {0 /* 0x0 */, 512000 /* 0x7d000 */}
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg_IDX_0 0
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg_IDX_1 512000
+#define DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0_P_reg_EXISTS 1
 
 /*
  * Chosen nodes
@@ -10341,19 +10322,19 @@
 #define DT_CHOSEN_zephyr_console_EXISTS          1
 #define DT_CHOSEN_zephyr_bt_c2h_uart             DT_N_S_uart_pty_0
 #define DT_CHOSEN_zephyr_bt_c2h_uart_EXISTS      1
-#define DT_CHOSEN_zephyr_flash_controller        DT_N_S_soc_S_rram_controller_5004b000
+#define DT_CHOSEN_zephyr_flash_controller        DT_N_S_soc_S_sim_flash_controller
 #define DT_CHOSEN_zephyr_flash_controller_EXISTS 1
-#define DT_CHOSEN_zephyr_flash                   DT_N_S_soc_S_rram_controller_5004b000_S_rram_0
+#define DT_CHOSEN_zephyr_flash                   DT_N_S_soc_S_sim_flash_controller_S_flash_0
 #define DT_CHOSEN_zephyr_flash_EXISTS            1
 #define DT_CHOSEN_zephyr_shell_uart              DT_N_S_uart_pty_0
 #define DT_CHOSEN_zephyr_shell_uart_EXISTS       1
 
 /* Macros for iterating over all nodes and enabled nodes */
-#define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart20_default) fn(DT_N_S_pin_controller_S_uart20_default_S_group1) fn(DT_N_S_pin_controller_S_uart20_default_S_group2) fn(DT_N_S_pin_controller_S_uart20_sleep) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart30_default) fn(DT_N_S_pin_controller_S_uart30_default_S_group1) fn(DT_N_S_pin_controller_S_uart30_default_S_group2) fn(DT_N_S_pin_controller_S_uart30_sleep) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_pclk) fn(DT_N_S_clocks_S_lfxo) fn(DT_N_S_clocks_S_hfxo) fn(DT_N_S_clocks_S_hfpll) fn(DT_N_S_soc) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000) fn(DT_N_S_soc_S_peripheral_50000000_S_spi_4a000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_4a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_55000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_85000) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_87000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_ieee802154) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_controller) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c7000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c8000) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_c9000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ca000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cb000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cc000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cd000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ce000) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d0000) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d1000) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_104000) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret1_500) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret2_504) fn(DT_N_S_soc_S_peripheral_50000000_S_comparator_106000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000_S_regulator_120600) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_timer_e000e010) fn(DT_N_S_chosen) fn(DT_N_S_rng) fn(DT_N_S_psa_rng) fn(DT_N_S_uart_pty_0)
-#define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart20_default) fn(DT_N_S_pin_controller_S_uart20_default_S_group1) fn(DT_N_S_pin_controller_S_uart20_default_S_group2) fn(DT_N_S_pin_controller_S_uart20_sleep) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart30_default) fn(DT_N_S_pin_controller_S_uart30_default_S_group1) fn(DT_N_S_pin_controller_S_uart30_default_S_group2) fn(DT_N_S_pin_controller_S_uart30_sleep) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_pclk) fn(DT_N_S_clocks_S_lfxo) fn(DT_N_S_clocks_S_hfxo) fn(DT_N_S_clocks_S_hfpll) fn(DT_N_S_soc) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000) fn(DT_N_S_soc_S_rram_controller_5004b000) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100) fn(DT_N_S_chosen) fn(DT_N_S_rng) fn(DT_N_S_uart_pty_0)
-#define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_pclk, __VA_ARGS__) fn(DT_N_S_clocks_S_lfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfpll, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_spi_4a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_4a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_55000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_85000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_87000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_controller, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c8000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_c9000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ca000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cb000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cd000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ce000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d0000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d1000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_104000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret1_500, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret2_504, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_comparator_106000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000_S_regulator_120600, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_rng, __VA_ARGS__) fn(DT_N_S_psa_rng, __VA_ARGS__) fn(DT_N_S_uart_pty_0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_pclk, __VA_ARGS__) fn(DT_N_S_clocks_S_lfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfpll, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_rng, __VA_ARGS__) fn(DT_N_S_uart_pty_0, __VA_ARGS__)
-#define DT_COMPAT_fixed_partitions_LABEL_storage DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions_S_partition_0
+#define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart20_default) fn(DT_N_S_pin_controller_S_uart20_default_S_group1) fn(DT_N_S_pin_controller_S_uart20_default_S_group2) fn(DT_N_S_pin_controller_S_uart20_sleep) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart30_default) fn(DT_N_S_pin_controller_S_uart30_default_S_group1) fn(DT_N_S_pin_controller_S_uart30_default_S_group2) fn(DT_N_S_pin_controller_S_uart30_sleep) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_pclk) fn(DT_N_S_clocks_S_lfxo) fn(DT_N_S_clocks_S_hfxo) fn(DT_N_S_clocks_S_hfpll) fn(DT_N_S_soc) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000) fn(DT_N_S_soc_S_peripheral_50000000_S_spi_4a000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_4a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_55000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_85000) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_87000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_ieee802154) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_controller) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c7000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c8000) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_c9000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ca000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cb000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cc000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cd000) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ce000) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d0000) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d1000) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_104000) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret1_500) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret2_504) fn(DT_N_S_soc_S_peripheral_50000000_S_comparator_106000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000_S_regulator_120600) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_timer_e000e010) fn(DT_N_S_soc_S_sim_flash_controller) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_chosen) fn(DT_N_S_rng) fn(DT_N_S_psa_rng) fn(DT_N_S_uart_pty_0)
+#define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart20_default) fn(DT_N_S_pin_controller_S_uart20_default_S_group1) fn(DT_N_S_pin_controller_S_uart20_default_S_group2) fn(DT_N_S_pin_controller_S_uart20_sleep) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1) fn(DT_N_S_pin_controller_S_uart30_default) fn(DT_N_S_pin_controller_S_uart30_default_S_group1) fn(DT_N_S_pin_controller_S_uart30_default_S_group2) fn(DT_N_S_pin_controller_S_uart30_sleep) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_pclk) fn(DT_N_S_clocks_S_lfxo) fn(DT_N_S_clocks_S_hfxo) fn(DT_N_S_clocks_S_hfpll) fn(DT_N_S_soc) fn(DT_N_S_soc_S_uicr_ffd000) fn(DT_N_S_soc_S_ficr_ffc000) fn(DT_N_S_soc_S_peripheral_50000000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000) fn(DT_N_S_soc_S_memory_50041000) fn(DT_N_S_soc_S_cpuapp_ppb_bus) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_sim_flash_controller) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_chosen) fn(DT_N_S_rng) fn(DT_N_S_uart_pty_0)
+#define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_pclk, __VA_ARGS__) fn(DT_N_S_clocks_S_lfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfpll, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_spi_4a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_4a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_55000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_85000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_87000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_ieee802154, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_controller, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c8000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_egu_c9000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ca000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cb000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_cd000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_timer_ce000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d0000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_pdm_d1000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_104000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret1_500, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_power_10e000_S_gpregret2_504, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_comparator_106000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_regulator_120000_S_regulator_120600, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_rng, __VA_ARGS__) fn(DT_N_S_psa_rng, __VA_ARGS__) fn(DT_N_S_uart_pty_0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_pin_controller, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart20_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group1, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_default_S_group2, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep, __VA_ARGS__) fn(DT_N_S_pin_controller_S_uart30_sleep_S_group1, __VA_ARGS__) fn(DT_N_S_entropy_bt_hci, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_pclk, __VA_ARGS__) fn(DT_N_S_clocks_S_lfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfxo, __VA_ARGS__) fn(DT_N_S_clocks_S_hfpll, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_uicr_ffd000, __VA_ARGS__) fn(DT_N_S_soc_S_ficr_ffc000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_42000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_43000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_44000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_50400, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_82000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_83000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_84000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_radio_8a000_S_bt_hci_sdc, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_c2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c3000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c4000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_c5000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_uart_c6000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_temp_d7000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_d8200, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_da000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_grtc_e2000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_dppic_102000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_ppib_103000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpio_10a000, __VA_ARGS__) fn(DT_N_S_soc_S_peripheral_50000000_S_gpiote_10c000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus, __VA_ARGS__) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_rng, __VA_ARGS__) fn(DT_N_S_uart_pty_0, __VA_ARGS__)
+#define DT_COMPAT_fixed_partitions_LABEL_storage DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions_S_partition_0
 #define DT_COMPAT_fixed_partitions_LABEL_storage_EXISTS 1
 
 /*
@@ -10379,11 +10360,11 @@
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_gpiote 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_grtc 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_clock 1
-#define DT_COMPAT_HAS_OKAY_nordic_rram_controller 1
-#define DT_COMPAT_HAS_OKAY_soc_nv_flash 1
-#define DT_COMPAT_HAS_OKAY_fixed_partitions 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_mpc 1
 #define DT_COMPAT_HAS_OKAY_arm_v8m_nvic 1
+#define DT_COMPAT_HAS_OKAY_zephyr_sim_flash 1
+#define DT_COMPAT_HAS_OKAY_soc_nv_flash 1
+#define DT_COMPAT_HAS_OKAY_fixed_partitions 1
 #define DT_COMPAT_HAS_OKAY_nordic_nrf_cracen_ctrdrbg 1
 #define DT_COMPAT_HAS_OKAY_zephyr_native_pty_uart 1
 
@@ -10410,11 +10391,11 @@
 #define DT_N_INST_nordic_nrf_gpiote_NUM_OKAY 2
 #define DT_N_INST_nordic_nrf_grtc_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_clock_NUM_OKAY 1
-#define DT_N_INST_nordic_rram_controller_NUM_OKAY 1
-#define DT_N_INST_soc_nv_flash_NUM_OKAY 1
-#define DT_N_INST_fixed_partitions_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_mpc_NUM_OKAY 1
 #define DT_N_INST_arm_v8m_nvic_NUM_OKAY 1
+#define DT_N_INST_zephyr_sim_flash_NUM_OKAY 1
+#define DT_N_INST_soc_nv_flash_NUM_OKAY 1
+#define DT_N_INST_fixed_partitions_NUM_OKAY 1
 #define DT_N_INST_nordic_nrf_cracen_ctrdrbg_NUM_OKAY 1
 #define DT_N_INST_zephyr_native_pty_uart_NUM_OKAY 1
 #define DT_FOREACH_OKAY_bsim_nrf54l15_bsim_nrf54l15_cpuapp(fn) fn(DT_N)
@@ -10497,18 +10478,6 @@
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf_clock(fn, ...) fn(DT_N_S_soc_S_peripheral_50000000_S_clock_10e000, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf_clock(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_nordic_nrf_clock(fn, ...) fn(0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_nordic_rram_controller(fn) fn(DT_N_S_soc_S_rram_controller_5004b000)
-#define DT_FOREACH_OKAY_VARGS_nordic_rram_controller(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_nordic_rram_controller(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_nordic_rram_controller(fn, ...) fn(0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_soc_nv_flash(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0)
-#define DT_FOREACH_OKAY_VARGS_soc_nv_flash(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_soc_nv_flash(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_soc_nv_flash(fn, ...) fn(0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_fixed_partitions(fn) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions)
-#define DT_FOREACH_OKAY_VARGS_fixed_partitions(fn, ...) fn(DT_N_S_soc_S_rram_controller_5004b000_S_rram_0_S_partitions, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_fixed_partitions(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_fixed_partitions(fn, ...) fn(0, __VA_ARGS__)
 #define DT_FOREACH_OKAY_nordic_nrf_mpc(fn) fn(DT_N_S_soc_S_memory_50041000)
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf_mpc(fn, ...) fn(DT_N_S_soc_S_memory_50041000, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf_mpc(fn) fn(0)
@@ -10517,6 +10486,18 @@
 #define DT_FOREACH_OKAY_VARGS_arm_v8m_nvic(fn, ...) fn(DT_N_S_soc_S_cpuapp_ppb_bus_S_interrupt_controller_e000e100, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_arm_v8m_nvic(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_arm_v8m_nvic(fn, ...) fn(0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_zephyr_sim_flash(fn) fn(DT_N_S_soc_S_sim_flash_controller)
+#define DT_FOREACH_OKAY_VARGS_zephyr_sim_flash(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller, __VA_ARGS__)
+#define DT_FOREACH_OKAY_INST_zephyr_sim_flash(fn) fn(0)
+#define DT_FOREACH_OKAY_INST_VARGS_zephyr_sim_flash(fn, ...) fn(0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_soc_nv_flash(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0)
+#define DT_FOREACH_OKAY_VARGS_soc_nv_flash(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_INST_soc_nv_flash(fn) fn(0)
+#define DT_FOREACH_OKAY_INST_VARGS_soc_nv_flash(fn, ...) fn(0, __VA_ARGS__)
+#define DT_FOREACH_OKAY_fixed_partitions(fn) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions)
+#define DT_FOREACH_OKAY_VARGS_fixed_partitions(fn, ...) fn(DT_N_S_soc_S_sim_flash_controller_S_flash_0_S_partitions, __VA_ARGS__)
+#define DT_FOREACH_OKAY_INST_fixed_partitions(fn) fn(0)
+#define DT_FOREACH_OKAY_INST_VARGS_fixed_partitions(fn, ...) fn(0, __VA_ARGS__)
 #define DT_FOREACH_OKAY_nordic_nrf_cracen_ctrdrbg(fn) fn(DT_N_S_rng)
 #define DT_FOREACH_OKAY_VARGS_nordic_nrf_cracen_ctrdrbg(fn, ...) fn(DT_N_S_rng, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_nordic_nrf_cracen_ctrdrbg(fn) fn(0)

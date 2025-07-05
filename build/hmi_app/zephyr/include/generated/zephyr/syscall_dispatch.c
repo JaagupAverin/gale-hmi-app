@@ -51,6 +51,10 @@ uintptr_t z_mrsh_log_frontend_filter_set(uintptr_t arg1, uintptr_t arg2, uintptr
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
 __weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_flash_simulator_get_memory(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_flash_read(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
@@ -633,6 +637,7 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_LOG_BUFFERED_CNT] = z_mrsh_log_buffered_cnt,
 	[K_SYSCALL_LOG_FILTER_SET] = z_mrsh_log_filter_set,
 	[K_SYSCALL_LOG_FRONTEND_FILTER_SET] = z_mrsh_log_frontend_filter_set,
+	[K_SYSCALL_FLASH_SIMULATOR_GET_MEMORY] = z_mrsh_flash_simulator_get_memory,
 	[K_SYSCALL_FLASH_READ] = z_mrsh_flash_read,
 	[K_SYSCALL_FLASH_WRITE] = z_mrsh_flash_write,
 	[K_SYSCALL_FLASH_ERASE] = z_mrsh_flash_erase,

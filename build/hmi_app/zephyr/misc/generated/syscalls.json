@@ -89,6 +89,14 @@
     ],
     [
         [
+            "void *flash_simulator_get_memory",
+            "const struct device *dev,\n\t\t\t\t\t   size_t *mock_size"
+        ],
+        "flash_simulator.h",
+        true
+    ],
+    [
+        [
             "int flash_read",
             "const struct device *dev, off_t offset, void *data,\n\t\t\t size_t len"
         ],
@@ -3733,14 +3741,6 @@
             "const struct device *dev, int channel_id"
         ],
         "watchdog.h",
-        false
-    ],
-    [
-        [
-            "void *flash_simulator_get_memory",
-            "const struct device *dev,\n\t\t\t\t\t   size_t *mock_size"
-        ],
-        "flash_simulator.h",
         false
     ],
     [

@@ -33,6 +33,7 @@ extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_get_write_bloc
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_read;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_read_jedec_id;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_sfdp_read;
+extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_simulator_get_memory;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_flash_write;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_busy_wait;
 extern __weak ALIAS_OF(no_syscall_impl) void * const z_impl_k_condvar_broadcast;

@@ -589,36 +589,6 @@
 			};
 		};
 
-		/* node '/soc/rram-controller@5004b000' defined in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:721 */
-		rram_controller: rram-controller@5004b000 {
-			compatible = "nordic,rram-controller"; /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:722 */
-			reg = < 0x5004b000 0x1000 >;           /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:723 */
-			#address-cells = < 0x1 >;              /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:724 */
-			#size-cells = < 0x1 >;                 /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:725 */
-			interrupts = < 0x4b 0x1 >;             /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:726 */
-
-			/* node '/soc/rram-controller@5004b000/rram@0' defined in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:728 */
-			cpuapp_rram: rram@0 {
-				compatible = "soc-nv-flash";   /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:729 */
-				erase-block-size = < 0x1000 >; /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:730 */
-				write-block-size = < 0x10 >;   /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:731 */
-				reg = < 0x0 0x165000 >;        /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l15.dtsi:28 */
-
-				/* node '/soc/rram-controller@5004b000/rram@0/partitions' defined in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:74 */
-				partitions {
-					compatible = "fixed-partitions"; /* in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:75 */
-					#address-cells = < 0x1 >;        /* in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:76 */
-					#size-cells = < 0x1 >;           /* in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:77 */
-
-					/* node '/soc/rram-controller@5004b000/rram@0/partitions/partition@0' defined in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:78 */
-					storage_partition: partition@0 {
-						label = "storage";     /* in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:79 */
-						reg = < 0x0 0x7d000 >; /* in gale/projects/zephyr/boards/native/nrf_bsim/nrf54l15bsim_nrf54l15_cpuapp.dts:80 */
-					};
-				};
-			};
-		};
-
 		/* node '/soc/memory@50041000' defined in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:735 */
 		nrf_mpc: memory@50041000 {
 			compatible = "nordic,nrf-mpc";     /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:736 */
@@ -652,6 +622,35 @@
 				compatible = "arm,armv8m-systick"; /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:758 */
 				reg = < 0xe000e010 0x10 >;         /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:759 */
 				status = "disabled";               /* in gale/projects/zephyr/dts/vendor/nordic/nrf54l_05_10_15.dtsi:760 */
+			};
+		};
+
+		/* node '/soc/sim_flash_controller' defined in gale/projects/shared/boards/nrf54l15bsim/app.overlay:19 */
+		rram_controller: sim_flash_controller {
+			compatible = "zephyr,sim-flash"; /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:20 */
+			erase-value = < 0xff >;          /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:21 */
+			#address-cells = < 0x1 >;        /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:22 */
+			#size-cells = < 0x1 >;           /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:23 */
+
+			/* node '/soc/sim_flash_controller/flash@0' defined in gale/projects/shared/boards/nrf54l15bsim/app.overlay:25 */
+			cpuapp_rram: flash@0 {
+				compatible = "soc-nv-flash";   /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:26 */
+				reg = < 0x0 0x165000 >;        /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:27 */
+				erase-block-size = < 0x1000 >; /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:28 */
+				write-block-size = < 0x10 >;   /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:29 */
+
+				/* node '/soc/sim_flash_controller/flash@0/partitions' defined in gale/projects/shared/boards/nrf54l15bsim/app.overlay:31 */
+				partitions {
+					compatible = "fixed-partitions"; /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:32 */
+					#address-cells = < 0x1 >;        /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:33 */
+					#size-cells = < 0x1 >;           /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:34 */
+
+					/* node '/soc/sim_flash_controller/flash@0/partitions/partition@0' defined in gale/projects/shared/boards/nrf54l15bsim/app.overlay:35 */
+					storage_partition: partition@0 {
+						label = "storage";     /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:36 */
+						reg = < 0x0 0x7d000 >; /* in gale/projects/shared/boards/nrf54l15bsim/app.overlay:37 */
+					};
+				};
 			};
 		};
 	};

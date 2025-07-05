@@ -1283,7 +1283,7 @@ nvic: &cpuapp_nvic {};
     chosen {
         zephyr,console = &uart_pty_0;
         zephyr,shell-uart = &uart_pty_0;
-  zephyr,bt-c2h-uart = &uart_pty_0;
+        zephyr,bt-c2h-uart = &uart_pty_0;
     };
 
     uart_pty_0: uart_pty_0 {
@@ -1291,6 +1291,38 @@ nvic: &cpuapp_nvic {};
         current-speed = <115200>;
         status = "okay";
     };
+
+    soc {
+
+
+
+        /delete-node/ rram-controller@5004b000;
+        rram_controller: sim_flash_controller {
+            compatible = "zephyr,sim-flash";
+            erase-value = <0xff>;
+            #address-cells = <1>;
+            #size-cells = <1>;
+
+            cpuapp_rram: flash@0 {
+                compatible = "soc-nv-flash";
+                reg = <0x00000000 ((1428) * 1024)>;
+                erase-block-size = <4096>;
+                write-block-size = <16>;
+
+                partitions {
+                    compatible = "fixed-partitions";
+                    #address-cells = <1>;
+                    #size-cells = <1>;
+                    storage_partition: partition@0 {
+                        label = "storage";
+                        reg = <0x0 ((500) * 1024)>;
+                    };
+                };
+            };
+
+        };
+    };
+
 };
 # 0 "<command-line>" 2
 # 1 "/home/jaagup/projects/gale_ws/gale/projects/zephyr/misc/empty_file.c"

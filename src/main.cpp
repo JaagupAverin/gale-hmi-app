@@ -31,7 +31,7 @@ int flash_test() {
     // Write the modified data back to the storage partition
     err = flash_area_write(storage_area, 0, buf, sizeof(buf));
     if (err != 0) {
-        LOG_ERR("Could not write storage partition");
+        LOG_ERR("Could not write storage partition: %d", err);
         return EINVAL;
     }
 
