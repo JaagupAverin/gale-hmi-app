@@ -16,18 +16,25 @@ int flash_test() {
         return EINVAL;
     }
 
-    uint8_t buf[512];
+    uint8_t buf[4096];
     err = flash_area_read(storage_area, 0, buf, sizeof(buf));
     if (err != 0) {
         LOG_ERR("Could not read storage partition");
         return EINVAL;
     }
 
-    LOG_HEXDUMP_INF(buf, sizeof(buf), "Storage partition data loaded");
+    LOG_HEXDUMP_INF(buf, 128, "Storage partition data loaded");
 
     // Increment all bytes by 1:
     for (int i = 0; i < sizeof(buf); i++) {
         buf[i]++;
+    }
+
+    // Erase area:
+    err = flash_area_erase(storage_area, 0, sizeof(buf));
+    if (err != 0) {
+        LOG_ERR("Could not erase storage partition: %d", err);
+        return EINVAL;
     }
 
     // Write the modified data back to the storage partition
