@@ -1,4 +1,6 @@
 #include <app_version.h>
+#include <cstdlib>
+#include <cstring>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/storage/flash_map.h>
@@ -39,6 +41,21 @@ int flash_test() {
     // moving to native-sim.
 
     return 0;
+}
+
+// When run, should trigger AddressSanitizer's "use after free" error; see CONFIG_ASAN=y.
+void test_address_sanitizer() {
+    char *buf = (char *)malloc(512);
+
+    // Works:
+    strcpy(buf, "Hello, world!");
+    LOG_INF("buf=%s", buf);
+
+    free(buf);
+
+    // Will trigger error detection:
+    strcpy(buf, "Bye, world!");
+    LOG_INF("buf=%s", buf);
 }
 
 int main() {

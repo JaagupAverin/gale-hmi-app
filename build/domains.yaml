@@ -1,7 +1,0 @@
-default: hmi_app
-build_dir: /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build
-domains:
-  - name: hmi_app
-    build_dir: /home/jaagup/projects/gale_ws/gale/projects/hmi_app/build/hmi_app
-flash_order:
-  - hmi_app

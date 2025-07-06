@@ -1,6 +1,0 @@
-"nrf":"/home/jaagup/projects/gale_ws/gale/projects/nrf":"/home/jaagup/projects/gale_ws/gale/projects/nrf"
-"mcuboot":"/home/jaagup/projects/gale_ws/gale/projects/bootloader/mcuboot":"${ZEPHYR_MCUBOOT_CMAKE_DIR}"
-"cmsis_6":"/home/jaagup/projects/gale_ws/gale/projects/modules/hal/cmsis_6":"${ZEPHYR_CMSIS_6_CMAKE_DIR}"
-"hal_nordic":"/home/jaagup/projects/gale_ws/gale/projects/modules/hal/nordic":"${ZEPHYR_HAL_NORDIC_CMAKE_DIR}"
-"nrfxlib":"/home/jaagup/projects/gale_ws/gale/projects/nrfxlib":"${ZEPHYR_NRFXLIB_CMAKE_DIR}"
-"nrf_hw_models":"/home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models":"/home/jaagup/projects/gale_ws/gale/projects/modules/bsim_hw_models/nrf_hw_models"

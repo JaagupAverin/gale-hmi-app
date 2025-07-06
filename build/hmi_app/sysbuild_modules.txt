@@ -1,2 +1,0 @@
-"nrf":"/home/jaagup/projects/gale_ws/gale/projects/nrf":"/home/jaagup/projects/gale_ws/gale/projects/nrf/sysbuild"
-"mcuboot":"/home/jaagup/projects/gale_ws/gale/projects/bootloader/mcuboot":"/home/jaagup/projects/gale_ws/gale/projects/bootloader/mcuboot/boot/zephyr/sysbuild"
