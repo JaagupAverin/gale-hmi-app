@@ -1,4 +1,4 @@
-#include "debugging.hpp"
+#include "tests/debugging.hpp"
 
 #include <memory.h>
 #include <stdlib.h>

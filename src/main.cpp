@@ -1,7 +1,7 @@
 #include <app_version.h>
 #include <zephyr/kernel.h>
 
-#include "tests/cpp.hpp"
+#include "tests/cplusplus.hpp"
 #include "tests/storage.hpp"
 
 #include <zephyr/logging/log.h>
@@ -13,8 +13,9 @@ int main() {
     test_storage();
     test_cpp();
 
+    int i = 0;
     while (true) {
-        LOG_INF("TICK!");
+        LOG_INF("TICK #%d!", i++);
         k_sleep(K_MSEC(10000));
     }
     return 0;
