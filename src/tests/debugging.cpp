@@ -1,3 +1,5 @@
+#pragma GCC diagnostic ignored "-Wuse-after-free"
+
 #include "tests/debugging.hpp"
 
 #include <memory.h>

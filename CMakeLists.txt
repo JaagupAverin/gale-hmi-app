@@ -11,7 +11,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 target_sources(app PRIVATE
     src/main.cpp
     src/tests/cplusplus.cpp
+    src/tests/debugging.cpp
+    src/tests/devicetree.cpp
     src/tests/storage.cpp
+    src/tests/toys.cpp
 )
 
 target_include_directories(app PRIVATE include)
