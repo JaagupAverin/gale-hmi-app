@@ -20,7 +20,7 @@ int main() {
     int i = 0;
     while (true) {
         LOG_INF("TICK #%d!", i++);
-        k_sleep(K_MSEC(10000));
+        k_sleep(K_MSEC(100));
     }
     return 0;
 }
