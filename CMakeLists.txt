@@ -15,6 +15,7 @@ target_sources(app PRIVATE
     src/tests/devicetree.cpp
     src/tests/storage.cpp
     src/tests/toys.cpp
+    src/tests/emulation.cpp
 )
 
 target_include_directories(app PRIVATE include)
