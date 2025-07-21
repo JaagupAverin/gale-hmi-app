@@ -1,5 +1,6 @@
 #include "tests/emulation.hpp"
 
+#include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/fuel_gauge.h>
 
@@ -26,7 +27,23 @@ void test_emulated_fuel_gauge() {
      projects/zephyr/include/zephyr/drivers/emul_fuel_gauge.h
     */
     static const device* dev = DEVICE_DT_GET(DT_NODELABEL(fuel_gauge));
+    static const device* i2c_dev = DEVICE_DT_GET(DT_PARENT(DT_NODELABEL(fuel_gauge)));
     static const emul* emul = EMUL_DT_GET(DT_NODELABEL(fuel_gauge));
+
+    // For testing purposes, the devices are defined with the 'zephyr,deferred-init' property,
+    // so we can initialize them at runtime when needed:
+    if (!device_is_ready(i2c_dev)) {
+        if (device_init(i2c_dev) != 0) {
+            LOG_ERR("Failed to initialize i2c device");
+            return;
+        }
+    }
+    if (!device_is_ready(dev)) {
+        if (device_init(dev) != 0) {
+            LOG_ERR("Failed to initialize fuel gauge device");
+            return;
+        }
+    }
 
     LOG_INF("Using fuel gauge %s", dev->name);
 
