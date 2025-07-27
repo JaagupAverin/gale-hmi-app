@@ -46,9 +46,9 @@ static int cmd_hello(const struct shell* sh, size_t argc, char** argv) {
     auto last_name = StringArg{"last", "Last name of person to greet"};
     auto polite = FlagArg{"polite", "Use polite form of greeting over casual"};
     auto height_m = FloatArg{"height", "Height of person to greet, in meters", 0};
-    auto cmd = Args("Print hello to the user", {&first_name, &last_name, &polite, &height_m});
+    auto args = Args("Print hello to the user", {&first_name, &last_name, &polite, &height_m});
 
-    if (!cmd.parse_all(sh, argc, argv)) {
+    if (!args.parse_all(sh, argc, argv)) {
         shell_print(sh, "Error: Invalid arguments");
         return EINVAL;
     }
