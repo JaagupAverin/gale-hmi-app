@@ -3,26 +3,26 @@
 
 #include "tests/cplusplus.hpp"
 #include "tests/devicetree.hpp"
+#include "tests/emulation.hpp"
 #include "tests/storage.hpp"
 #include "tests/toys.hpp"
-#include "tests/emulation.hpp"
 
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 
 int main() {
-    LOG_INF("Hello, world?! " APP_VERSION_STRING);
+	LOG_INF("Hello, world?! " APP_VERSION_STRING);
 
-    test_storage();
-    test_cpp();
-    test_devicetree();
-    test_toys();
-    test_emulation();
+	test_storage();
+	test_cpp();
+	test_devicetree();
+	test_toys();
+	test_emulation();
 
-    int i = 0;
-    while (true) {
-        LOG_INF("TICK #%d!", i++);
-        k_sleep(K_MSEC(10000));
-    }
-    return 0;
+	int i = 0;
+	while (true) {
+		LOG_INF("TICK #%d!", i++);
+		k_sleep(K_MSEC(10000));
+	}
+	return 0;
 }
