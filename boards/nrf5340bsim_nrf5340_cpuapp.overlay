@@ -1,5 +1,3 @@
-#include <shared/nrf5340bsim_nrf5340_cpuapp.dtsi>
-
 / {
 	#include "./common/i2c_emul.dtsi"
 

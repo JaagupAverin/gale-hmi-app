@@ -4,15 +4,15 @@ cmake_minimum_required(VERSION 3.30)
 
 
 # TODO: Still problem; can't include extra .conf files because egg and chicken problem:
-get_cmake_property(_variableNames VARIABLES)
-foreach(_variableName ${_variableNames})
-  message(STATUS "${_variableName} = ${${_variableName}}")
-endforeach()
-message(FATAL_ERROR "DONE")
-if(CONFIG_SOC_SERIES_BSIM_NRFXX)
-  message("Building for BabbleSim; including extra .conf for simulation and analysis")
-  set(EXTRA_CONF_FILES ${EXTRA_CONF_FILES} ${ZEPHYR_SHARED_MODULE_DIR}/soc/bsim_defconfig)
-endif()
+# get_cmake_property(_variableNames VARIABLES)
+# foreach(_variableName ${_variableNames})
+#   message(STATUS "${_variableName} = ${${_variableName}}")
+# endforeach()
+# message(FATAL_ERROR "DONE")
+# if(CONFIG_SOC_SERIES_BSIM_NRFXX)
+#   message("Building for BabbleSim; including extra .conf for simulation and analysis")
+#   set(EXTRA_CONF_FILES ${EXTRA_CONF_FILES} ${ZEPHYR_SHARED_MODULE_DIR}/soc/bsim_defconfig)
+# endif()
 
 
 
