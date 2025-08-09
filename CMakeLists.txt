@@ -36,6 +36,7 @@ target_sources(app PRIVATE
   src/tests/storage.cpp
   src/tests/toys.cpp
   src/tests/emulation.cpp
+  src/tests/multicore.cpp
 )
 
 target_include_directories(app PRIVATE include)

@@ -7,5 +7,4 @@ partitions {
 		label = "storage";
 		reg = <0x0 DT_SIZE_K(256)>;
 	};
-
 }; /* partitions */

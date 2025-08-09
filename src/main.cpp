@@ -6,6 +6,7 @@
 #include "tests/emulation.hpp"
 #include "tests/storage.hpp"
 #include "tests/toys.hpp"
+#include "tests/multicore.hpp"
 
 #include <zephyr/logging/log.h>
 LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
@@ -18,6 +19,7 @@ int main() {
 	test_devicetree();
 	test_toys();
 	test_emulation();
+	test_multicore();
 
 	int i = 0;
 	while (true) {

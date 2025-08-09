@@ -27,7 +27,7 @@ struct Arg {
 	Arg(const char* name, const char* help, std::optional<std::string> default_value, bool has_arg)
 		: long_name(name), help(help), default_value(default_value), short_name(name[0]), has_arg(has_arg) {}
 
-	const char* long_name;						// Full name of the argument, e.g. "file"
+	const char* long_name;					  // Full name of the argument, e.g. "file"
 	const char* help;						  // Human-readable description of the argument
 	std::optional<std::string> default_value; // Default value for argument; if not given, the argument is required
 	const char short_name;					  // Defaults to the first character of the long name, e.g. 'f'
