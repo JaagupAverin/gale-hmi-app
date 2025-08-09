@@ -37,4 +37,17 @@ static void test_mbox() {
 }
 K_THREAD_DEFINE(test_mbox_thread, 1024, test_mbox, NULL, NULL, NULL, 7, 0, K_FOREVER.ticks);
 
+static void test_ipc() {
+	// Zephyr has several layers and mechanisms for IPC:
+	//   - mbox (basically just an inter-CPU interrupt)
+	//   - RPmsg (also allows passing data with basic format for messages)
+	//   - OpenAMP (open source standard built on top of rpmsg, adds events, lifecycles, etc)
+	//   - (Zephyr also defines "ICMsg backend", which is a lighter alternative to OpenAMP for the IPC service module)
+	// 	 - (Zephyr also defines "rpmsg service" on top of openamp, but that appears mostly obsolete)
+	//   - IPC service (Zephyr's highest level and most common module for IPC; built on top of OpenAMP or IPMsg)
+	// We're only interested in IPC service (with OpenAMP) for now, but others may be required for performance reasons.
+
+	// TODO: Get rid of mbox, get IPC SHELL and some custom IPC service going :)
+}
+
 void test_multicore() { k_thread_start(test_mbox_thread); }
