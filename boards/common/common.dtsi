@@ -1,4 +1,4 @@
-/{
+/ {
 	#include "./i2c_emul.dtsi"
 	#include "./lfs_fstab.dtsi"
 

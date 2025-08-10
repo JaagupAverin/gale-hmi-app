@@ -1,0 +1,51 @@
+/* Defines two IPCs 'ipc_kernel' and 'ipc_user' in place of the default 'ipc0'. */
+
+#include <zephyr/dt-bindings/ipc_service/static_vrings.h>
+
+/ {
+	chosen {
+		zephyr,ipc_shm = &ipc_kernel;
+		nordic,802154-spinel-ipc = &ipc_kernel;
+	};
+
+	reserved-memory {
+		/delete-node/ memory@20070000;
+
+		sram_ipc_kernel: memory@20070000 {
+			reg = <0x20070000 0x8000>;
+		};
+
+		sram_ipc_user: memory@20078000 {
+			reg = <0x20078000 0x8000>;
+		};
+	};
+
+	ipc {
+		/delete-node/ ipc0;
+
+		ipc_kernel: ipc_kernel {
+			compatible = "zephyr,ipc-openamp-static-vrings";
+			memory-region = <&sram_ipc_kernel>;
+			mboxes = <&mbox 0>, <&mbox 1>;
+			mbox-names = "tx", "rx";
+			role = "host";
+			status = "okay";
+
+			bt_hci_ipc0: bt_hci_ipc0 {
+				status = "okay";
+				compatible = "zephyr,bt-hci-ipc";
+			};
+		};
+
+		ipc_user: ipc_user {
+			compatible = "zephyr,ipc-openamp-static-vrings";
+			memory-region = <&sram_ipc_user>;
+			mboxes = <&mbox 2>, <&mbox 3>;
+			mbox-names = "tx", "rx";
+			role = "host";
+			zephyr,priority = <1 PRIO_COOP>;
+			zephyr,buffer-size = <512>;
+			status = "okay";
+		};
+	};
+};

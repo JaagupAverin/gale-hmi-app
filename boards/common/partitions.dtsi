@@ -1,3 +1,5 @@
+/* Defines a common flash partition map. */
+
 partitions {
 	compatible = "fixed-partitions";
 	#address-cells = <1>;

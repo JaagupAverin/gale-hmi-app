@@ -1,3 +1,5 @@
+/* Defines an emulated I2C controller and an emulated fuel gauge device just for experimentation purposes. */
+
 i2c0: i2c@0 {
 	status = "okay";
 	compatible = "zephyr,i2c-emul-controller";
